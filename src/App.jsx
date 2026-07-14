@@ -1,20 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
-import AddPet from './components/AddPet'
-import ViewPet from './components/ViewPet'
+import "./App.css";
+import { BrowserRouter } from "react-router-dom";
+
+import NavigationBar from "./components/NavigationBar";
+import AddPet from "./components/AddPet";
+import ViewPet from "./components/ViewPet";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <AddPet/>
-      <ViewPet/>
-    </>
-  )
+    <BrowserRouter>
+      <NavigationBar />
+      <AddPet />
+      <ViewPet />
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
